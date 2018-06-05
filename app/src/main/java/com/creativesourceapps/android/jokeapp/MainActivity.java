@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.creativesourceapps.android.androidlibrary.JokeActivity;
 import com.creativesourceapps.android.jokewizard.GetJoke;
 import com.creativesourceapps.java.joke.JokeSmith;
 
@@ -32,12 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
         textView2.setText(getJoke.getJoke());
 
+        final Intent intent = new Intent(this, JokeActivity.class);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, MainActivity.class);
+
 
                 intent.putExtra("joke", jokeSmith.tellAHandCraftedJoke());
+
+
 
                 startActivity(intent);
             }

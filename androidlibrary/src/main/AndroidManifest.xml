@@ -3,7 +3,7 @@
     package="com.creativesourceapps.android.androidlibrary">
 
     <application>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".JokeActivity"></activity>
     </application>
 
 </manifest>
