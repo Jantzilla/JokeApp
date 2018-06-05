@@ -25,6 +25,7 @@ dependencies {
 
     implementation project (':manualLibrary')
     implementation project (':JokeWizard')
+    implementation project (':androidlibrary')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
