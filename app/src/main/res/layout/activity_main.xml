@@ -25,4 +25,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_one" />
 
+    <Button
+        android:id="@+id/btn_joke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_two"
+        android:text="Get Joke"/>
+
 </android.support.constraint.ConstraintLayout>
