@@ -1,3 +1,5 @@
+package com.creativesourceapps.java.joke;
+
 import java.lang.String;
 
 public class JokeSmith {
