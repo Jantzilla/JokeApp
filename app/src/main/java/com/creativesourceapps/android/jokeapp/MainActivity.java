@@ -9,12 +9,10 @@ import android.widget.TextView;
 
 import com.creativesourceapps.android.androidlibrary.JokeActivity;
 import com.creativesourceapps.android.jokewizard.GetJoke;
-import com.creativesourceapps.java.joke.JokeSmith;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textView, textView2;
+    TextView textView;
     Button button;
-    JokeSmith jokeSmith;
     GetJoke getJoke;
 
     @Override
@@ -22,16 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = (TextView) findViewById(R.id.text_view_one);
-        textView2 = (TextView) findViewById(R.id.text_view_two);
         button = (Button) findViewById(R.id.btn_joke);
 
-        jokeSmith = new JokeSmith();
         getJoke = new GetJoke();
 
-
-        textView.setText(jokeSmith.tellAHandCraftedJoke());
-
-        textView2.setText(getJoke.getJoke());
+        textView.setText(getJoke.getJoke());
 
         final Intent intent = new Intent(this, JokeActivity.class);
 
@@ -39,10 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-                intent.putExtra("joke", jokeSmith.tellAHandCraftedJoke());
-
-
+                intent.putExtra("joke", getJoke.getJoke());
 
                 startActivity(intent);
             }
